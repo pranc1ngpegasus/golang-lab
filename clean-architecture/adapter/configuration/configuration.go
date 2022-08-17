@@ -8,6 +8,11 @@ import (
 
 type (
 	Config struct {
+		Server Server
+	}
+
+	Server struct {
+		Port string `envconfig:"SERVER_PORT" default:"3000"`
 	}
 )
 
