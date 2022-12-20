@@ -1,3 +1,7 @@
+.PHONY: generate.xo
+generate.xo:
+	@go run github.com/xo/xo schema postgres://${DATABASE_USER}:${DATABASE_PASSWORD}@${DATABASE_HOST}/${DATABASE_NAME}?sslmode=disable -o infra/persistence/model
+
 .PHONY: migrate.plan
 migrate.plan:
 	@go run github.com/k0kubun/sqldef/cmd/psqldef -U${DATABASE_USER} -W${DATABASE_PASSWORD} -h${DATABASE_HOST} -p${DATABASE_PORT} ${DATABASE_NAME} --dry-run < schema.sql
