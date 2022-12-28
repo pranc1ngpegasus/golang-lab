@@ -17,6 +17,7 @@ import (
 	"github.com/Pranc1ngPegasus/golang-lab/playwright/infra/configuration"
 	"github.com/Pranc1ngPegasus/golang-lab/playwright/infra/logger"
 	"github.com/Pranc1ngPegasus/golang-lab/playwright/infra/tracer"
+	"github.com/Pranc1ngPegasus/golang-lab/playwright/usecase"
 )
 
 // Injectors from wire.go:
@@ -35,7 +36,11 @@ func initialize() (*app, error) {
 	if err != nil {
 		return nil, err
 	}
-	handlerHandler := handler.NewHandler(loggerLogger)
+	playwright, err := usecase.NewPlaywright(tracerTracer)
+	if err != nil {
+		return nil, err
+	}
+	handlerHandler := handler.NewHandler(loggerLogger, playwright)
 	httpServer := server.NewServer(contextContext, loggerLogger, configurationConfiguration, handlerHandler)
 	mainApp := &app{
 		ctx:    contextContext,

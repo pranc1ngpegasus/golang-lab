@@ -14,6 +14,7 @@ import (
 	"github.com/Pranc1ngPegasus/golang-lab/playwright/infra/configuration"
 	"github.com/Pranc1ngPegasus/golang-lab/playwright/infra/logger"
 	"github.com/Pranc1ngPegasus/golang-lab/playwright/infra/tracer"
+	"github.com/Pranc1ngPegasus/golang-lab/playwright/usecase"
 	"github.com/google/wire"
 )
 
@@ -30,6 +31,7 @@ func initialize() (*app, error) {
 		configuration.NewConfigurationSet,
 		logger.NewLoggerSet,
 		tracer.NewTracerSet,
+		usecase.NewPlaywrightSet,
 		handler.NewHandlerSet,
 		server.NewServer,
 		wire.Struct(new(app), "*"),
