@@ -3,6 +3,7 @@ module github.com/Pranc1ngPegasus/golang-lab/playwright
 go 1.19
 
 require (
+	github.com/Netflix/go-env v0.0.0-20220526054621-78278af1949d
 	github.com/cosmtrek/air v1.40.4
 	github.com/golang/mock v1.6.0
 	github.com/google/wire v0.5.0
