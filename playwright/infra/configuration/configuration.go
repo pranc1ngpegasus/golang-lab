@@ -17,6 +17,7 @@ var NewConfigurationSet = wire.NewSet(
 
 type Configuration struct {
 	common *domain.Common
+	server *domain.Server
 }
 
 func NewConfiguration() (*Configuration, error) {
@@ -28,9 +29,14 @@ func NewConfiguration() (*Configuration, error) {
 
 	return &Configuration{
 		common: &config.Common,
+		server: &config.Server,
 	}, nil
 }
 
 func (c *Configuration) Common() *domain.Common {
 	return c.common
+}
+
+func (c *Configuration) Server() *domain.Server {
+	return c.server
 }

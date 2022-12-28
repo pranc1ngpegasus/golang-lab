@@ -14,6 +14,7 @@ require (
 	github.com/samber/lo v1.37.0
 	github.com/uptrace/opentelemetry-go-extra/otelzap v0.1.17
 	go.opentelemetry.io/contrib/detectors/gcp v1.12.0
+	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.37.0
 	go.opentelemetry.io/otel v1.11.2
 	go.opentelemetry.io/otel/sdk v1.11.2
 	go.opentelemetry.io/otel/trace v1.11.2
@@ -35,6 +36,7 @@ require (
 	github.com/creack/pty v1.1.11 // indirect
 	github.com/danwakefield/fnmatch v0.0.0-20160403171240-cbb64ac3d964 // indirect
 	github.com/fatih/color v1.10.0 // indirect
+	github.com/felixge/httpsnoop v1.0.3 // indirect
 	github.com/fsnotify/fsnotify v1.4.9 // indirect
 	github.com/go-logr/logr v1.2.3 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
@@ -53,6 +55,7 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/uptrace/opentelemetry-go-extra/otelutil v0.1.17 // indirect
 	go.opencensus.io v0.23.0 // indirect
+	go.opentelemetry.io/otel/metric v0.34.0 // indirect
 	go.uber.org/atomic v1.10.0 // indirect
 	golang.org/x/exp v0.0.0-20220303212507-bbda1eaf7a17 // indirect
 	golang.org/x/mod v0.7.0 // indirect
