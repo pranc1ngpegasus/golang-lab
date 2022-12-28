@@ -1,3 +1,7 @@
+.PHONY: dev
+dev:
+	@go run github.com/cosmtrek/air -c .air.toml
+
 .PHONY: generate.mock
 generate.mock:
 	@go generate ./domain/...
