@@ -1,0 +1,5 @@
+debug:
+  enabled: true
+  logfrequency: 10s
+server:
+  port: 8080
